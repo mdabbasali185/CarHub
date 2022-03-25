@@ -1,8 +1,43 @@
-.my-card .card{
-    height: 100%;
+.my-card .card {
+  height: 100%;
 }
-.cart-btn{
-    width: 100%;
+.cart-btn {
+  width: 100%;
+  color: whitesmoke;
+  background: #636e72;
+  border-radius:13px ;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.cart-btn:hover {
+  background: #2C3A47;
+  transition: 0.5s;
+  color: white;
+}
+.card-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #2d3436;
+}
+.card-text {
+  font-size: 1.3rem;
+  color: #2d3436;
+  font-weight: 600;
+}
+.price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3436;
+}
+.card {
     
-    background: rgb(206, 193, 193);
+  -webkit-box-shadow: 1px 7px 17px 0px rgba(48, 50, 20, 0.92);
+  -moz-box-shadow: 1px 7px 17px 0px rgba(48, 50, 20, 0.92);
+  box-shadow: 1px 7px 17px 0px rgba(48, 50, 20, 0.92);
+  border-radius: 15px;
+  border: 2px solid #F8EFBA;
+}
+.card img{
+    padding: 12px;
+    border-radius: 30px;
 }

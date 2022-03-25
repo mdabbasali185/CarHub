@@ -1,17 +1,29 @@
 import "./Card.css";
 
 const Card = (props) => {
-  const { _id, picture, name, company } = props.product;
+  const { _id, picture, name, company, price } = props.product;
   return (
     <div className="col my-card" key={_id}>
       <div className="card">
         <img src={picture} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Name: {name}</h5>
-          <p className="card-text">{company}</p>
-          
+          <h5>
+            <span className="card-title">Name: </span> {name}
+          </h5>
+          <p>
+            <span className="card-text">Company: </span> {company}
+          </p>
+          <p>
+            <span className="price">Price: $</span>
+            {price}
+          </p>
         </div>
-        <button className="cart-btn btn" onClick={()=>props.addToCart(props.product)}>Add To Cart</button>
+        <button
+          className="cart-btn btn"
+          onClick={() => props.addToCart(props.product)}
+        >
+          Add To Cart
+        </button>
       </div>
     </div>
   );
