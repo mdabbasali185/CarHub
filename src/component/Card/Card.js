@@ -9,8 +9,9 @@ const Card = (props) => {
         <div className="card-body">
           <h5 className="card-title">Name: {name}</h5>
           <p className="card-text">{company}</p>
-          <button className="cart-btn">Add To Cart</button>
+          
         </div>
+        <button className="cart-btn btn" onClick={()=>props.addToCart(props.product)}>Add To Cart</button>
       </div>
     </div>
   );
