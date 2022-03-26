@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import CartSection from "../CartSection/CartSection";
 import "./Shop.css";
 const Shop = () => {
+  // fetch data
   const [products, setProducts] = useState([]);
   const [carts, setCart] = useState([]);
   useEffect(() => {
@@ -10,27 +11,25 @@ const Shop = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-
   const addToCart = (cartItem) => {
-   if(carts.length<4){
-    const checkCartsId = carts.find((cart) => cart._id === cartItem._id);
-    if (!checkCartsId) {
-      setCart([...carts, cartItem]);
+    if (carts.length < 4) {
+      const checkCartsId = carts.find((cart) => cart._id === cartItem._id);
+      if (!checkCartsId) {
+        setCart([...carts, cartItem]);
+      } else {
+        alert("all ready exits");
+      }
     } else {
-      alert("all ready exicts");
+      alert("only selected 4 items");
     }
-   }else{
-     alert('only selected 4 items')
-   }
   };
   const choseOnMe = () => {
-   if(carts.length>0){
-    let random = Math.floor(Math.random() * carts.length);
-    setCart([carts[random]]);
-   }else{
-     alert('please select product')
-   }
-   
+    if (carts.length > 0) {
+      let random = Math.floor(Math.random() * carts.length);
+      setCart([carts[random]]);
+    } else {
+      alert("please select product");
+    }
   };
   const choseAgain = () => {
     setCart([]);

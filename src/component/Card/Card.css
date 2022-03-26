@@ -1,6 +1,7 @@
 .my-card .card {
   height: 100%;
 }
+/* card button part */
 .cart-btn {
   width: 100%;
   color: whitesmoke;
@@ -9,6 +10,7 @@
   font-size: 1.1rem;
   font-weight: bold;
 }
+/* card hover part */
 .cart-btn:hover {
   background: #2C3A47;
   transition: 0.5s;
@@ -24,6 +26,7 @@
   color: #2d3436;
   font-weight: 600;
 }
+/* price part  */
 .price {
   font-size: 1.3rem;
   font-weight: 600;
