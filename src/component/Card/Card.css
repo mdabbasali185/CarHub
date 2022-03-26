@@ -6,13 +6,13 @@
   width: 100%;
   color: whitesmoke;
   background: #636e72;
-  border-radius:5px ;
+  border-radius: 5px;
   font-size: 1.1rem;
   font-weight: bold;
 }
 /* card hover part */
 .cart-btn:hover {
-  background: #2C3A47;
+  background: #2c3a47;
   transition: 0.5s;
   color: white;
 }
@@ -33,12 +33,11 @@
   color: #2d3436;
 }
 .card {
-    
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   border-radius: 5px;
-  border: 1px solid #F8EFBA;
+  border: 1px solid #f8efba;
 }
-.card img{
-    padding: 12px;
-    border-radius: 10px;
+.card img {
+  padding: 12px;
+  border-radius: 10px;
 }

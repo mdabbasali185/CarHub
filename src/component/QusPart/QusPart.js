@@ -3,7 +3,7 @@ import React from "react";
 const QusPart = () => {
   return (
     <div className="container">
-        {/* question part start */}
+      {/* question part start */}
       <h1> 1. How react js works?</h1>
       <p>
         React is a JavaScript library.React two types of dom first Actual dom
