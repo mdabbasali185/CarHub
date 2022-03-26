@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import CartSection from "../CartSection/CartSection";
-
-
+import "./Shop.css";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [carts, setCart] = useState([]);
@@ -11,8 +10,30 @@ const Shop = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
   const addToCart = (cartItem) => {
-    setCart([...carts, cartItem]);
+   if(carts.length<4){
+    const checkCartsId = carts.find((cart) => cart._id === cartItem._id);
+    if (!checkCartsId) {
+      setCart([...carts, cartItem]);
+    } else {
+      alert("all ready exicts");
+    }
+   }else{
+     alert('only selected 4 items')
+   }
+  };
+  const choseOnMe = () => {
+   if(carts.length>0){
+    let random = Math.floor(Math.random() * carts.length);
+    setCart([carts[random]]);
+   }else{
+     alert('please select product')
+   }
+   
+  };
+  const choseAgain = () => {
+    setCart([]);
   };
   return (
     <div className="row">
@@ -28,7 +49,11 @@ const Shop = () => {
         </div>
       </div>
       <div className="col-md-4">
-          <CartSection></CartSection>
+        <CartSection
+          choseOnMe={choseOnMe}
+          choseAgain={choseAgain}
+          carts={carts}
+        ></CartSection>
       </div>
     </div>
   );
