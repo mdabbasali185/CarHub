@@ -3,11 +3,14 @@ import './CartSection.css'
 
 const CartSection = (props) => {
   return (
-    <div>
-      <h1 className="text-center">Selected Items</h1>
+    <div className='right-part'>
+      <h1 className="text-center right-section">Selected <span className='header-2'>Items</span></h1>
       {
         props.carts.map(cart=>(
-          <h4 key={cart._id}>{cart.name}</h4>
+          <div>
+            <h4 key={cart._id}>{cart.name}</h4>
+            <hr />
+          </div>
         ))
       }
       <div>
