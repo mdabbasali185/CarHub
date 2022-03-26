@@ -8,8 +8,10 @@ function App() {
     <div className="App container">
      <Header></Header>
      <Shop></Shop>
+     <hr />
     </div>
   );
 }
+
 
 export default App;

@@ -1,4 +1,6 @@
 import "./Card.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Card = (props) => {
   const { _id, picture, name, company, price } = props.product;
@@ -22,7 +24,7 @@ const Card = (props) => {
           className="cart-btn btn"
           onClick={() => props.addToCart(props.product)}
         >
-          Add To Cart
+          Add To Cart <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
         </button>
       </div>
     </div>
