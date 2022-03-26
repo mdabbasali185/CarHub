@@ -13,7 +13,7 @@ const QusPart = () => {
         versions of virtual DOM.It uses the observable to detect state and prop
         changes.
       </p>
-      <h2>2. Different between 'props' and 'states'?</h2>
+      <h1>2. Different between 'props' and 'states'?</h1>
       <p>
         We can pass the data between the components using Props and State.{" "}
         <strong>PROPS: </strong>The Data is passed from one component to
